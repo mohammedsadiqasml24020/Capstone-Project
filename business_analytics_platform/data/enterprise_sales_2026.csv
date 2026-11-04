@@ -1,0 +1,75 @@
+Date,Product,Category,Region,Customer_Segment,Sales,Profit,Units,Discount
+2026-01-05,Laptop Pro,Computers,North,Corporate,85000,12750,1,0.05
+2026-01-08,Smartphone X,Mobile,East,Consumer,42000,6300,1,0.00
+2026-01-12,Wireless Headphones,Audio,West,Consumer,14000,3500,2,0.10
+2026-01-15,4K Gaming Monitor,Peripherals,South,Corporate,32000,5760,1,0.05
+2026-01-19,Galaxy Tab,Mobile,North,Small Business,28000,3920,1,0.00
+2026-01-24,Ergonomic Keyboard,Peripherals,East,Consumer,9500,2375,2,0.00
+2026-01-28,Smart Watch V2,Wearables,West,Consumer,18500,4070,1,0.05
+2026-02-02,Laptop Pro,Computers,West,Corporate,170000,25500,2,0.08
+2026-02-06,UltraBook,Computers,South,Small Business,62000,8680,1,0.05
+2026-02-11,Smartphone X,Mobile,North,Consumer,84000,12600,2,0.00
+2026-02-16,Wireless Headphones,Audio,East,Consumer,21000,5250,3,0.10
+2026-02-21,Galaxy Tab,Mobile,West,Corporate,56000,7840,2,0.05
+2026-02-26,4K Gaming Monitor,Peripherals,North,Small Business,64000,11520,2,0.05
+2026-03-03,Laptop Pro,Computers,East,Corporate,85000,12750,1,0.00
+2026-03-07,Smartphone X,Mobile,South,Consumer,42000,6300,1,0.00
+2026-03-12,Smart Watch V2,Wearables,North,Consumer,37000,8140,2,0.05
+2026-03-18,Ergonomic Keyboard,Peripherals,West,Small Business,19000,4750,4,0.10
+2026-03-23,UltraBook,Computers,East,Corporate,124000,17360,2,0.05
+2026-03-28,Galaxy Tab,Mobile,South,Consumer,28000,3920,1,0.00
+2026-04-02,Laptop Pro,Computers,North,Corporate,255000,38250,3,0.10
+2026-04-07,Smartphone X,Mobile,West,Consumer,126000,18900,3,0.05
+2026-04-12,Wireless Headphones,Audio,South,Consumer,28000,7000,4,0.10
+2026-04-18,4K Gaming Monitor,Peripherals,East,Corporate,96000,17280,3,0.05
+2026-04-22,Smart Watch V2,Wearables,West,Small Business,18500,4070,1,0.00
+2026-04-27,Ergonomic Keyboard,Peripherals,North,Consumer,14250,3562,3,0.05
+2026-05-04,UltraBook,Computers,North,Corporate,62000,8680,1,0.00
+2026-05-09,Galaxy Tab,Mobile,East,Consumer,56000,7840,2,0.05
+2026-05-14,Laptop Pro,Computers,South,Corporate,170000,25500,2,0.05
+2026-05-19,Smartphone X,Mobile,West,Small Business,84000,12600,2,0.00
+2026-05-25,Wireless Headphones,Audio,North,Consumer,35000,8750,5,0.10
+2026-05-30,4K Gaming Monitor,Peripherals,West,Consumer,32000,5760,1,0.00
+2026-06-03,Laptop Pro,Computers,East,Corporate,85000,12750,1,0.00
+2026-06-08,Smart Watch V2,Wearables,South,Consumer,55500,12210,3,0.05
+2026-06-13,Smartphone X,Mobile,North,Corporate,126000,18900,3,0.05
+2026-06-18,Ergonomic Keyboard,Peripherals,West,Small Business,23750,5937,5,0.10
+2026-06-24,Galaxy Tab,Mobile,East,Corporate,84000,11760,3,0.05
+2026-06-29,UltraBook,Computers,South,Consumer,62000,8680,1,0.00
+2026-07-04,Laptop Pro,Computers,North,Corporate,170000,25500,2,0.05
+2026-07-09,4K Gaming Monitor,Peripherals,East,Small Business,64000,11520,2,0.05
+2026-07-14,Smartphone X,Mobile,South,Consumer,42000,6300,1,0.00
+2026-07-19,Wireless Headphones,Audio,West,Consumer,42000,10500,6,0.15
+2026-07-25,Smart Watch V2,Wearables,North,Corporate,37000,8140,2,0.00
+2026-07-30,UltraBook,Computers,East,Consumer,124000,17360,2,0.05
+2026-08-04,Laptop Pro,Computers,West,Corporate,255000,38250,3,0.08
+2026-08-09,Galaxy Tab,Mobile,North,Small Business,56000,7840,2,0.05
+2026-08-14,Smartphone X,Mobile,East,Consumer,84000,12600,2,0.00
+2026-08-20,Ergonomic Keyboard,Peripherals,South,Consumer,19000,4750,4,0.05
+2026-08-25,4K Gaming Monitor,Peripherals,North,Corporate,128000,23040,4,0.05
+2026-08-30,Wireless Headphones,Audio,East,Small Business,21000,5250,3,0.10
+2026-09-03,Laptop Pro,Computers,South,Corporate,85000,12750,1,0.00
+2026-09-08,UltraBook,Computers,West,Corporate,186000,26040,3,0.05
+2026-09-14,Smartphone X,Mobile,North,Consumer,42000,6300,1,0.00
+2026-09-19,Smart Watch V2,Wearables,East,Consumer,74000,16280,4,0.08
+2026-09-24,Galaxy Tab,Mobile,West,Consumer,28000,3920,1,0.00
+2026-09-29,4K Gaming Monitor,Peripherals,South,Small Business,32000,5760,1,0.00
+2026-10-04,Laptop Pro,Computers,North,Corporate,340000,51000,4,0.10
+2026-10-09,Smartphone X,Mobile,West,Consumer,168000,25200,4,0.05
+2026-10-15,Wireless Headphones,Audio,North,Consumer,49000,12250,7,0.12
+2026-10-20,UltraBook,Computers,East,Corporate,124000,17360,2,0.05
+2026-10-25,Ergonomic Keyboard,Peripherals,East,Corporate,28500,7125,6,0.05
+2026-10-29,Galaxy Tab,Mobile,South,Small Business,84000,11760,3,0.05
+2026-11-03,Laptop Pro,Computers,East,Corporate,425000,63750,5,0.12
+2026-11-08,Smartphone X,Mobile,North,Consumer,210000,31500,5,0.08
+2026-11-13,4K Gaming Monitor,Peripherals,West,Corporate,160000,28800,5,0.08
+2026-11-18,Smart Watch V2,Wearables,South,Consumer,92500,20350,5,0.10
+2026-11-23,Wireless Headphones,Audio,West,Consumer,56000,14000,8,0.15
+2026-11-28,UltraBook,Computers,North,Small Business,186000,26040,3,0.05
+2026-12-03,Laptop Pro,Computers,South,Corporate,510000,76500,6,0.15
+2026-12-08,Smartphone X,Mobile,East,Consumer,252000,37800,6,0.10
+2026-12-14,Galaxy Tab,Mobile,West,Corporate,112000,15680,4,0.08
+2026-12-19,4K Gaming Monitor,Peripherals,North,Consumer,96000,17280,3,0.05
+2026-12-23,Smart Watch V2,Wearables,East,Consumer,111000,24420,6,0.10
+2026-12-28,Wireless Headphones,Audio,South,Consumer,70000,17500,10,0.15
+2026-12-30,Ergonomic Keyboard,Peripherals,North,Small Business,38000,9500,8,0.10

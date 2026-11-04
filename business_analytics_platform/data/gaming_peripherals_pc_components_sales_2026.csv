@@ -1,0 +1,361 @@
+Date,Product,Category,Region,Customer_Segment,Sales,Profit,Units,Discount
+2026-01-02,Gaming Controller,Gaming Peripherals,East,Small Business,7020,4020,3,0.1
+2026-01-05,1TB SATA SSD,PC Components,South,Individual,9600,6900,2,0.0
+2026-01-08,Gaming Monitor 24-inch,Gaming Peripherals,South,Corporate,11500,7300,1,0.08
+2026-01-08,B760 Motherboard,PC Components,Central,Small Business,13775,10175,1,0.05
+2026-01-08,120mm Case Fan,PC Components,East,Gaming Enthusiast,735,485,1,0.02
+2026-01-09,Mechanical Gaming Keyboard,Gaming Peripherals,South,Small Business,12420,7020,3,0.08
+2026-01-09,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,Central,Gaming Enthusiast,37000,24600,2,0.0
+2026-01-15,B760 Motherboard,PC Components,West,Gaming Enthusiast,13340,9740,1,0.08
+2026-01-16,Gaming Chair,Gaming Peripherals,West,Gaming Enthusiast,12325,7525,1,0.15
+2026-01-17,USB Gaming Microphone,Gaming Peripherals,North,Corporate,6400,3900,2,0.0
+2026-01-19,Webcam 1080p,Gaming Peripherals,West,Corporate,9408,5808,4,0.02
+2026-01-19,Gaming Headset,Gaming Peripherals,East,Small Business,3220,1820,1,0.08
+2026-01-20,RGB Desk Light,Gaming Peripherals,North,Gaming Enthusiast,7600,4600,5,0.05
+2026-01-21,B760 Motherboard,PC Components,North,Small Business,24650,17450,2,0.15
+2026-01-21,Streaming Capture Card,Gaming Peripherals,East,Corporate,6630,4030,1,0.15
+2026-01-22,AMD Ryzen 7 Processor,PC Components,West,Individual,20825,14725,1,0.15
+2026-01-22,240mm Liquid CPU Cooler,PC Components,West,Small Business,12240,8040,2,0.15
+2026-01-23,Mid-Tower PC Case,PC Components,Central,Gaming Enthusiast,5220,3520,1,0.1
+2026-01-25,USB Gaming Microphone,Gaming Peripherals,South,Corporate,3200,1950,1,0.0
+2026-01-25,Wireless Gaming Mouse,Gaming Peripherals,South,Individual,5152,2952,2,0.08
+2026-01-25,Wireless Gaming Mouse,Gaming Peripherals,North,Corporate,9520,5120,4,0.15
+2026-01-26,Gaming Headset,Gaming Peripherals,North,Gaming Enthusiast,3150,1750,1,0.1
+2026-01-26,Streaming Capture Card,Gaming Peripherals,East,Small Business,15600,10400,2,0.0
+2026-01-27,2TB NVMe SSD,PC Components,East,Gaming Enthusiast,41216,28816,4,0.08
+2026-01-27,1TB SATA SSD,PC Components,Central,Small Business,4416,3066,1,0.08
+2026-01-27,1TB SATA SSD,PC Components,East,Individual,4560,3210,1,0.05
+2026-01-27,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,East,Corporate,54390,35790,3,0.02
+2026-01-28,2TB NVMe SSD,PC Components,North,Individual,20608,14408,2,0.08
+2026-01-28,AMD Ryzen 7 Processor,PC Components,South,Small Business,41650,29450,2,0.15
+2026-01-29,650W 80+ Bronze Power Supply,PC Components,South,Gaming Enthusiast,6076,4326,1,0.02
+2026-01-29,Intel Core i5 Processor,PC Components,North,Small Business,15120,11020,1,0.1
+2026-01-29,AMD Ryzen 7 Processor,PC Components,West,Small Business,90160,65760,4,0.08
+2026-02-01,1TB NVMe SSD,PC Components,South,Corporate,11960,8160,2,0.08
+2026-02-01,AMD Ryzen 7 Processor,PC Components,Central,Small Business,98000,73600,4,0.0
+2026-02-01,Air CPU Cooler,PC Components,West,Individual,5488,3788,2,0.02
+2026-02-05,Gaming Headset,Gaming Peripherals,South,Individual,6440,3640,2,0.08
+2026-02-06,Streaming Capture Card,Gaming Peripherals,Central,Small Business,6630,4030,1,0.15
+2026-02-06,Thermal Paste,PC Components,South,Gaming Enthusiast,414,264,1,0.08
+2026-02-07,Mechanical Gaming Keyboard,Gaming Peripherals,West,Corporate,4140,2340,1,0.08
+2026-02-07,240mm Liquid CPU Cooler,PC Components,West,Corporate,6840,4740,1,0.05
+2026-02-07,Gaming Monitor 24-inch,Gaming Peripherals,North,Gaming Enthusiast,34500,21900,3,0.08
+2026-02-07,Air CPU Cooler,PC Components,Central,Small Business,14000,9750,5,0.0
+2026-02-08,Gaming Headset,Gaming Peripherals,South,Individual,3150,1750,1,0.1
+2026-02-08,16GB DDR5 RAM Kit,PC Components,West,Gaming Enthusiast,10400,7200,2,0.0
+2026-02-09,Gaming Mouse Pad,Gaming Peripherals,East,Individual,4410,2660,5,0.02
+2026-02-09,120mm Case Fan,PC Components,East,Small Business,690,440,1,0.08
+2026-02-10,Mechanical Gaming Keyboard,Gaming Peripherals,South,Individual,8550,4950,2,0.05
+2026-02-10,B760 Motherboard,PC Components,West,Gaming Enthusiast,13775,10175,1,0.05
+2026-02-11,Gaming Chair,Gaming Peripherals,West,Gaming Enthusiast,26100,16500,2,0.1
+2026-02-11,Gaming Mouse Pad,Gaming Peripherals,Central,Corporate,1620,920,2,0.1
+2026-02-11,1TB NVMe SSD,PC Components,South,Small Business,5850,3950,1,0.1
+2026-02-11,240mm Liquid CPU Cooler,PC Components,North,Gaming Enthusiast,7200,5100,1,0.0
+2026-02-13,ARGB PC Case,PC Components,South,Corporate,8330,5930,1,0.02
+2026-02-16,Gaming Controller,Gaming Peripherals,Central,Corporate,7800,4800,3,0.0
+2026-02-16,Gaming Chair,Gaming Peripherals,East,Gaming Enthusiast,14210,9410,1,0.02
+2026-02-17,16GB DDR5 RAM Kit,PC Components,West,Gaming Enthusiast,20800,14400,4,0.0
+2026-02-17,Gaming Chair,Gaming Peripherals,South,Small Business,29000,19400,2,0.0
+2026-02-19,USB Gaming Microphone,Gaming Peripherals,North,Gaming Enthusiast,6272,3772,2,0.02
+2026-02-20,Mid-Tower PC Case,PC Components,West,Gaming Enthusiast,21344,14544,4,0.08
+2026-02-21,Webcam 1080p,Gaming Peripherals,South,Individual,2208,1308,1,0.08
+2026-02-21,NVIDIA GeForce RTX 4060 GPU,PC Components,West,Small Business,80325,64725,3,0.15
+2026-02-22,NVIDIA GeForce RTX 4070 GPU,PC Components,North,Corporate,55575,47075,1,0.05
+2026-02-23,AMD Ryzen 7 Processor,PC Components,Central,Gaming Enthusiast,20825,14725,1,0.15
+2026-02-23,2TB Hard Drive,PC Components,South,Gaming Enthusiast,4420,2920,1,0.15
+2026-02-26,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,North,Small Business,18130,11930,1,0.02
+2026-02-26,AMD Ryzen 5 Processor,PC Components,West,Gaming Enthusiast,12325,8825,1,0.15
+2026-02-26,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,East,Corporate,17020,10820,1,0.08
+2026-02-27,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,East,Small Business,36260,23860,2,0.02
+2026-02-28,Mechanical Gaming Keyboard,Gaming Peripherals,North,Corporate,4140,2340,1,0.08
+2026-02-28,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,West,Individual,18130,11930,1,0.02
+2026-02-28,Gaming Controller,Gaming Peripherals,East,Small Business,7410,4410,3,0.05
+2026-03-01,AMD Ryzen 7 Processor,PC Components,West,Individual,23275,17175,1,0.05
+2026-03-03,650W 80+ Bronze Power Supply,PC Components,South,Small Business,22816,15816,4,0.08
+2026-03-03,16GB DDR5 RAM Kit,PC Components,South,Gaming Enthusiast,5096,3496,1,0.02
+2026-03-04,Intel Core i5 Processor,PC Components,West,Individual,16464,12364,1,0.02
+2026-03-05,Mid-Tower PC Case,PC Components,Central,Small Business,23200,16400,4,0.0
+2026-03-05,Webcam 1080p,Gaming Peripherals,West,Gaming Enthusiast,2160,1260,1,0.1
+2026-03-06,Mechanical Gaming Keyboard,Gaming Peripherals,West,Individual,8820,5220,2,0.02
+2026-03-07,240mm Liquid CPU Cooler,PC Components,North,Gaming Enthusiast,13248,9048,2,0.08
+2026-03-08,Gaming Monitor 24-inch,Gaming Peripherals,West,Small Business,36750,24150,3,0.02
+2026-03-08,650W 80+ Bronze Power Supply,PC Components,Central,Individual,16740,11490,3,0.1
+2026-03-09,Streaming Capture Card,Gaming Peripherals,Central,Corporate,7020,4420,1,0.1
+2026-03-09,Intel Core i5 Processor,PC Components,East,Corporate,15120,11020,1,0.1
+2026-03-11,Intel Core i5 Processor,PC Components,West,Gaming Enthusiast,16464,12364,1,0.02
+2026-03-12,240mm Liquid CPU Cooler,PC Components,Central,Corporate,7056,4956,1,0.02
+2026-03-13,Webcam 1080p,Gaming Peripherals,West,Gaming Enthusiast,4704,2904,2,0.02
+2026-03-13,USB Gaming Microphone,Gaming Peripherals,West,Corporate,11776,6776,4,0.08
+2026-03-16,750W 80+ Gold Power Supply,PC Components,West,Small Business,8820,6120,1,0.1
+2026-03-17,Gaming Headset,Gaming Peripherals,West,Individual,3150,1750,1,0.1
+2026-03-17,2TB NVMe SSD,PC Components,South,Individual,28560,19260,3,0.15
+2026-03-18,Webcam 1080p,Gaming Peripherals,East,Small Business,2352,1452,1,0.02
+2026-03-18,ARGB PC Case,PC Components,Central,Individual,8500,6100,1,0.0
+2026-03-18,Wireless Gaming Mouse,Gaming Peripherals,Central,Corporate,2744,1644,1,0.02
+2026-03-19,Streaming Capture Card,Gaming Peripherals,North,Small Business,6630,4030,1,0.15
+2026-03-20,USB Gaming Microphone,Gaming Peripherals,North,Small Business,2880,1630,1,0.1
+2026-03-20,2TB NVMe SSD,PC Components,West,Small Business,20608,14408,2,0.08
+2026-03-21,B760 Motherboard,PC Components,East,Small Business,13775,10175,1,0.05
+2026-03-21,NVIDIA GeForce RTX 4060 GPU,PC Components,West,Small Business,61740,51340,2,0.02
+2026-03-23,650W 80+ Bronze Power Supply,PC Components,East,Gaming Enthusiast,11160,7660,2,0.1
+2026-03-23,240mm Liquid CPU Cooler,PC Components,West,Gaming Enthusiast,7200,5100,1,0.0
+2026-03-23,Streaming Capture Card,Gaming Peripherals,West,Gaming Enthusiast,7410,4810,1,0.05
+2026-03-23,Mechanical Gaming Keyboard,Gaming Peripherals,West,Individual,17640,10440,4,0.02
+2026-03-25,16GB DDR5 RAM Kit,PC Components,East,Gaming Enthusiast,9880,6680,2,0.05
+2026-03-25,Gaming Controller,Gaming Peripherals,West,Gaming Enthusiast,9880,5880,4,0.05
+2026-03-25,Air CPU Cooler,PC Components,South,Corporate,8232,5682,3,0.02
+2026-03-26,Gaming Headset,Gaming Peripherals,West,Individual,2975,1575,1,0.15
+2026-03-26,Streaming Capture Card,Gaming Peripherals,East,Corporate,14040,8840,2,0.1
+2026-03-27,Gaming Monitor 24-inch,Gaming Peripherals,Central,Individual,23750,15350,2,0.05
+2026-03-28,Wi-Fi 6 PCIe Adapter,PC Components,North,Gaming Enthusiast,1656,1106,1,0.08
+2026-03-30,Gaming Headset,Gaming Peripherals,West,Individual,9660,5460,3,0.08
+2026-03-30,Thermal Paste,PC Components,North,Small Business,382,232,1,0.15
+2026-03-31,AMD Radeon RX 7600 GPU,PC Components,East,Small Business,72675,58575,3,0.15
+2026-03-31,Mechanical Gaming Keyboard,Gaming Peripherals,West,Corporate,4275,2475,1,0.05
+2026-04-01,Wireless Gaming Mouse,Gaming Peripherals,Central,Corporate,8232,4932,3,0.02
+2026-04-02,AMD Ryzen 5 Processor,PC Components,Central,Gaming Enthusiast,13775,10275,1,0.05
+2026-04-05,RGB Desk Light,Gaming Peripherals,South,Small Business,2720,1520,2,0.15
+2026-04-08,Gaming Chair,Gaming Peripherals,North,Corporate,58000,38800,4,0.0
+2026-04-08,16GB DDR5 RAM Kit,PC Components,East,Gaming Enthusiast,4420,2820,1,0.15
+2026-04-08,B760 Motherboard,PC Components,North,Individual,40020,29220,3,0.08
+2026-04-09,Thermal Paste,PC Components,West,Corporate,441,291,1,0.02
+2026-04-12,Thermal Paste,PC Components,West,Corporate,428,278,1,0.05
+2026-04-13,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,East,Corporate,47175,28575,3,0.15
+2026-04-15,B760 Motherboard,PC Components,West,Small Business,24650,17450,2,0.15
+2026-04-15,2TB Hard Drive,PC Components,West,Corporate,4420,2920,1,0.15
+2026-04-17,Gaming Chair,Gaming Peripherals,Central,Small Business,13050,8250,1,0.1
+2026-04-17,USB Gaming Microphone,Gaming Peripherals,West,Gaming Enthusiast,8160,4410,3,0.15
+2026-04-17,Gaming Chair,Gaming Peripherals,South,Gaming Enthusiast,72500,48500,5,0.0
+2026-04-19,Gaming Chair,Gaming Peripherals,West,Corporate,55100,35900,4,0.05
+2026-04-19,Gaming Controller,Gaming Peripherals,South,Individual,2600,1600,1,0.0
+2026-04-20,AMD Ryzen 5 Processor,PC Components,East,Corporate,14210,10710,1,0.02
+2026-04-20,Webcam 1080p,Gaming Peripherals,North,Corporate,4080,2280,2,0.15
+2026-04-20,Gaming Headset,Gaming Peripherals,West,Individual,3220,1820,1,0.08
+2026-04-22,16GB DDR5 RAM Kit,PC Components,Central,Individual,13260,8460,3,0.15
+2026-04-23,B760 Motherboard,PC Components,South,Gaming Enthusiast,27550,20350,2,0.05
+2026-04-25,2TB NVMe SSD,PC Components,North,Small Business,10976,7876,1,0.02
+2026-04-25,Mechanical Gaming Keyboard,Gaming Peripherals,South,Individual,13230,7830,3,0.02
+2026-04-26,AMD Radeon RX 7600 GPU,PC Components,East,Gaming Enthusiast,24225,19525,1,0.15
+2026-04-26,Gaming Mouse Pad,Gaming Peripherals,South,Individual,810,460,1,0.1
+2026-04-28,Gaming Controller,Gaming Peripherals,Central,Small Business,2340,1340,1,0.1
+2026-04-28,Wireless Gaming Mouse,Gaming Peripherals,North,Individual,8400,5100,3,0.0
+2026-05-01,Gaming Headset,Gaming Peripherals,West,Individual,3500,2100,1,0.0
+2026-05-03,1TB NVMe SSD,PC Components,Central,Corporate,22100,14500,4,0.15
+2026-05-03,B650 Motherboard,PC Components,East,Corporate,31350,22950,2,0.05
+2026-05-03,NVIDIA GeForce RTX 4060 GPU,PC Components,South,Gaming Enthusiast,26775,21575,1,0.15
+2026-05-04,AMD Radeon RX 7600 GPU,PC Components,South,Gaming Enthusiast,78660,64560,3,0.08
+2026-05-04,Wireless Gaming Mouse,Gaming Peripherals,West,Small Business,5152,2952,2,0.08
+2026-05-05,Thermal Paste,PC Components,North,Gaming Enthusiast,405,255,1,0.1
+2026-05-05,Wireless Gaming Mouse,Gaming Peripherals,East,Gaming Enthusiast,2576,1476,1,0.08
+2026-05-05,AMD Ryzen 7 Processor,PC Components,West,Corporate,49000,36800,2,0.0
+2026-05-06,NVIDIA GeForce RTX 4070 GPU,PC Components,East,Gaming Enthusiast,234000,200000,4,0.0
+2026-05-08,Intel Core i5 Processor,PC Components,North,Gaming Enthusiast,65856,49456,4,0.02
+2026-05-08,1TB NVMe SSD,PC Components,South,Small Business,19500,13800,3,0.0
+2026-05-09,Gaming Mouse Pad,Gaming Peripherals,North,Corporate,2646,1596,3,0.02
+2026-05-11,Gaming Monitor 24-inch,Gaming Peripherals,North,Corporate,23000,14600,2,0.08
+2026-05-12,Gaming Controller,Gaming Peripherals,West,Small Business,8840,4840,4,0.15
+2026-05-13,RGB Desk Light,Gaming Peripherals,South,Gaming Enthusiast,5888,3488,4,0.08
+2026-05-13,AMD Radeon RX 7600 GPU,PC Components,East,Gaming Enthusiast,54150,44750,2,0.05
+2026-05-14,240mm Liquid CPU Cooler,PC Components,East,Small Business,21600,15300,3,0.0
+2026-05-15,Mechanical Gaming Keyboard,Gaming Peripherals,South,Corporate,4410,2610,1,0.02
+2026-05-15,AMD Radeon RX 7600 GPU,PC Components,Central,Small Business,48450,39050,2,0.15
+2026-05-16,Gaming Controller,Gaming Peripherals,North,Corporate,7020,4020,3,0.1
+2026-05-16,Webcam 1080p,Gaming Peripherals,West,Gaming Enthusiast,2208,1308,1,0.08
+2026-05-16,Wi-Fi 6 PCIe Adapter,PC Components,North,Individual,1764,1214,1,0.02
+2026-05-20,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,South,Individual,16650,10450,1,0.1
+2026-05-21,2TB NVMe SSD,PC Components,East,Individual,19040,12840,2,0.15
+2026-05-21,USB Gaming Microphone,Gaming Peripherals,South,Gaming Enthusiast,2880,1630,1,0.1
+2026-05-23,1TB NVMe SSD,PC Components,East,Corporate,6500,4600,1,0.0
+2026-05-23,Air CPU Cooler,PC Components,Central,Gaming Enthusiast,5488,3788,2,0.02
+2026-05-23,1TB NVMe SSD,PC Components,West,Small Business,19500,13800,3,0.0
+2026-05-23,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,South,Individual,17575,11375,1,0.05
+2026-05-25,Gaming Chair,Gaming Peripherals,West,Corporate,14500,9700,1,0.0
+2026-05-25,16GB DDR5 RAM Kit,PC Components,North,Small Business,14040,9240,3,0.1
+2026-05-26,NVIDIA GeForce RTX 4060 GPU,PC Components,East,Small Business,57960,47560,2,0.08
+2026-05-27,16GB DDR5 RAM Kit,PC Components,West,Small Business,15288,10488,3,0.02
+2026-05-28,Gaming Chair,Gaming Peripherals,South,Individual,12325,7525,1,0.15
+2026-05-29,1TB SATA SSD,PC Components,North,Gaming Enthusiast,14112,10062,3,0.02
+2026-05-29,B650 Motherboard,PC Components,East,Individual,47025,34425,3,0.05
+2026-05-30,650W 80+ Bronze Power Supply,PC Components,North,Small Business,11408,7908,2,0.08
+2026-05-30,Intel Core i5 Processor,PC Components,South,Corporate,75600,55100,5,0.1
+2026-05-31,AMD Ryzen 5 Processor,PC Components,East,Gaming Enthusiast,14500,11000,1,0.0
+2026-06-01,USB Gaming Microphone,Gaming Peripherals,East,Individual,11776,6776,4,0.08
+2026-06-01,1TB NVMe SSD,PC Components,East,Corporate,6175,4275,1,0.05
+2026-06-03,Streaming Capture Card,Gaming Peripherals,East,Individual,14352,9152,2,0.08
+2026-06-04,Streaming Capture Card,Gaming Peripherals,West,Individual,19890,12090,3,0.15
+2026-06-04,Gaming Monitor 24-inch,Gaming Peripherals,Central,Individual,31875,19275,3,0.15
+2026-06-07,AMD Ryzen 5 Processor,PC Components,South,Individual,13775,10275,1,0.05
+2026-06-08,AMD Ryzen 7 Processor,PC Components,South,Small Business,72030,53730,3,0.02
+2026-06-08,Gaming Mouse Pad,Gaming Peripherals,Central,Corporate,3420,2020,4,0.05
+2026-06-08,Gaming Chair,Gaming Peripherals,Central,Corporate,43500,29100,3,0.0
+2026-06-08,RGB Desk Light,Gaming Peripherals,West,Gaming Enthusiast,5760,3360,4,0.1
+2026-06-09,USB Gaming Microphone,Gaming Peripherals,Central,Corporate,3200,1950,1,0.0
+2026-06-10,Wireless Gaming Mouse,Gaming Peripherals,West,Individual,5320,3120,2,0.05
+2026-06-11,Streaming Capture Card,Gaming Peripherals,North,Individual,14352,9152,2,0.08
+2026-06-13,Gaming Controller,Gaming Peripherals,South,Corporate,5200,3200,2,0.0
+2026-06-13,Gaming Controller,Gaming Peripherals,East,Corporate,4940,2940,2,0.05
+2026-06-14,B650 Motherboard,PC Components,West,Corporate,29700,21300,2,0.1
+2026-06-14,RGB Desk Light,Gaming Peripherals,South,Gaming Enthusiast,2880,1680,2,0.1
+2026-06-15,AMD Ryzen 7 Processor,PC Components,Central,Gaming Enthusiast,45080,32880,2,0.08
+2026-06-16,32GB DDR5 RAM Kit,PC Components,South,Corporate,9800,6900,1,0.0
+2026-06-17,1TB SATA SSD,PC Components,East,Corporate,4416,3066,1,0.08
+2026-06-17,AMD Ryzen 5 Processor,PC Components,Central,Small Business,26100,19100,2,0.1
+2026-06-17,Air CPU Cooler,PC Components,Central,Gaming Enthusiast,2744,1894,1,0.02
+2026-06-19,2TB Hard Drive,PC Components,Central,Gaming Enthusiast,4420,2920,1,0.15
+2026-06-21,NVIDIA GeForce RTX 4060 GPU,PC Components,South,Small Business,80325,64725,3,0.15
+2026-06-22,240mm Liquid CPU Cooler,PC Components,North,Corporate,13248,9048,2,0.08
+2026-06-23,Webcam 1080p,Gaming Peripherals,South,Gaming Enthusiast,8160,4560,4,0.15
+2026-06-23,Wireless Gaming Mouse,Gaming Peripherals,Central,Corporate,5320,3120,2,0.05
+2026-06-23,Gaming Headset,Gaming Peripherals,East,Individual,3325,1925,1,0.05
+2026-06-24,Streaming Capture Card,Gaming Peripherals,North,Gaming Enthusiast,29640,19240,4,0.05
+2026-06-24,Wireless Gaming Mouse,Gaming Peripherals,Central,Gaming Enthusiast,2576,1476,1,0.08
+2026-06-25,USB Gaming Microphone,Gaming Peripherals,South,Gaming Enthusiast,3136,1886,1,0.02
+2026-06-29,AMD Ryzen 7 Processor,PC Components,East,Corporate,48020,35820,2,0.02
+2026-06-30,USB Gaming Microphone,Gaming Peripherals,South,Corporate,5760,3260,2,0.1
+2026-07-03,32GB DDR5 RAM Kit,PC Components,East,Gaming Enthusiast,8820,5920,1,0.1
+2026-07-04,Streaming Capture Card,Gaming Peripherals,North,Individual,14040,8840,2,0.1
+2026-07-05,Webcam 1080p,Gaming Peripherals,Central,Small Business,2280,1380,1,0.05
+2026-07-05,2TB Hard Drive,PC Components,Central,Corporate,4680,3180,1,0.1
+2026-07-05,B650 Motherboard,PC Components,North,Gaming Enthusiast,32340,23940,2,0.02
+2026-07-05,Gaming Mouse Pad,Gaming Peripherals,West,Individual,2565,1515,3,0.05
+2026-07-07,AMD Radeon RX 7600 GPU,PC Components,Central,Gaming Enthusiast,25650,20950,1,0.1
+2026-07-08,Streaming Capture Card,Gaming Peripherals,Central,Small Business,29640,19240,4,0.05
+2026-07-08,Streaming Capture Card,Gaming Peripherals,West,Corporate,7800,5200,1,0.0
+2026-07-09,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,Central,Corporate,17020,10820,1,0.08
+2026-07-10,Streaming Capture Card,Gaming Peripherals,West,Individual,14820,9620,2,0.05
+2026-07-10,240mm Liquid CPU Cooler,PC Components,North,Small Business,6120,4020,1,0.15
+2026-07-11,Gaming Headset,Gaming Peripherals,East,Gaming Enthusiast,16100,9100,5,0.08
+2026-07-11,Gaming Headset,Gaming Peripherals,West,Corporate,6440,3640,2,0.08
+2026-07-11,750W 80+ Gold Power Supply,PC Components,East,Individual,9016,6316,1,0.08
+2026-07-11,2TB Hard Drive,PC Components,South,Corporate,4940,3440,1,0.05
+2026-07-11,B760 Motherboard,PC Components,South,Individual,14500,10900,1,0.0
+2026-07-12,650W 80+ Bronze Power Supply,PC Components,North,Small Business,22816,15816,4,0.08
+2026-07-14,Gaming Chair,Gaming Peripherals,South,Small Business,26100,16500,2,0.1
+2026-07-14,Gaming Controller,Gaming Peripherals,East,Corporate,7020,4020,3,0.1
+2026-07-18,RGB Desk Light,Gaming Peripherals,Central,Individual,1440,840,1,0.1
+2026-07-21,NVIDIA GeForce RTX 4060 GPU,PC Components,Central,Small Business,28350,23150,1,0.1
+2026-07-23,AMD Ryzen 7 Processor,PC Components,Central,Gaming Enthusiast,24010,17910,1,0.02
+2026-07-24,RGB Desk Light,Gaming Peripherals,South,Small Business,2944,1744,2,0.08
+2026-07-24,B760 Motherboard,PC Components,West,Individual,13340,9740,1,0.08
+2026-07-25,Gaming Mouse Pad,Gaming Peripherals,East,Individual,2565,1515,3,0.05
+2026-07-25,Thermal Paste,PC Components,Central,Individual,765,465,2,0.15
+2026-07-26,Gaming Monitor 24-inch,Gaming Peripherals,East,Corporate,21250,12850,2,0.15
+2026-07-27,Gaming Headset,Gaming Peripherals,West,Gaming Enthusiast,5950,3150,2,0.15
+2026-07-27,750W 80+ Gold Power Supply,PC Components,East,Corporate,8330,5630,1,0.15
+2026-07-28,Webcam 1080p,Gaming Peripherals,East,Individual,4416,2616,2,0.08
+2026-07-29,Mid-Tower PC Case,PC Components,South,Gaming Enthusiast,5336,3636,1,0.08
+2026-07-30,Gaming Headset,Gaming Peripherals,South,Gaming Enthusiast,9975,5775,3,0.05
+2026-07-31,Gaming Monitor 24-inch,Gaming Peripherals,West,Small Business,45000,28200,4,0.1
+2026-08-01,RGB Desk Light,Gaming Peripherals,West,Corporate,1472,872,1,0.08
+2026-08-01,Gaming Monitor 24-inch,Gaming Peripherals,North,Corporate,50000,33200,4,0.0
+2026-08-03,RGB Desk Light,Gaming Peripherals,West,Gaming Enthusiast,2944,1744,2,0.08
+2026-08-03,Gaming Controller,Gaming Peripherals,Central,Small Business,2392,1392,1,0.08
+2026-08-04,USB Gaming Microphone,Gaming Peripherals,Central,Individual,2720,1470,1,0.15
+2026-08-04,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,West,Individual,37000,24600,2,0.0
+2026-08-08,AMD Ryzen 7 Processor,PC Components,Central,Corporate,88200,63800,4,0.1
+2026-08-09,AMD Ryzen 5 Processor,PC Components,South,Individual,24650,17650,2,0.15
+2026-08-09,ARGB PC Case,PC Components,South,Gaming Enthusiast,8500,6100,1,0.0
+2026-08-09,AMD Ryzen 7 Processor,PC Components,Central,Small Business,73500,55200,3,0.0
+2026-08-10,Wireless Gaming Mouse,Gaming Peripherals,North,Gaming Enthusiast,8400,5100,3,0.0
+2026-08-12,240mm Liquid CPU Cooler,PC Components,North,Small Business,7200,5100,1,0.0
+2026-08-13,Mechanical Gaming Keyboard,Gaming Peripherals,North,Small Business,4050,2250,1,0.1
+2026-08-15,Wi-Fi 6 PCIe Adapter,PC Components,East,Gaming Enthusiast,3600,2500,2,0.0
+2026-08-15,Gaming Headset,Gaming Peripherals,North,Small Business,3150,1750,1,0.1
+2026-08-15,Wi-Fi 6 PCIe Adapter,PC Components,West,Gaming Enthusiast,3240,2140,2,0.1
+2026-08-15,NVIDIA GeForce RTX 4070 GPU,PC Components,East,Gaming Enthusiast,107640,90640,2,0.08
+2026-08-16,2TB NVMe SSD,PC Components,Central,Gaming Enthusiast,21952,15752,2,0.02
+2026-08-17,Mechanical Gaming Keyboard,Gaming Peripherals,East,Gaming Enthusiast,4410,2610,1,0.02
+2026-08-17,AMD Radeon RX 7600 GPU,PC Components,North,Gaming Enthusiast,54150,44750,2,0.05
+2026-08-18,650W 80+ Bronze Power Supply,PC Components,Central,Gaming Enthusiast,16740,11490,3,0.1
+2026-08-22,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,South,Corporate,18500,12300,1,0.0
+2026-08-24,1TB SATA SSD,PC Components,Central,Small Business,4416,3066,1,0.08
+2026-08-25,Gaming Controller,Gaming Peripherals,West,Individual,4940,2940,2,0.05
+2026-08-25,NVIDIA GeForce RTX 4070 GPU,PC Components,South,Individual,111150,94150,2,0.05
+2026-08-25,Wireless Gaming Mouse,Gaming Peripherals,South,Individual,5488,3288,2,0.02
+2026-08-25,650W 80+ Bronze Power Supply,PC Components,East,Individual,11160,7660,2,0.1
+2026-08-26,Mechanical Gaming Keyboard,Gaming Peripherals,Central,Corporate,12825,7425,3,0.05
+2026-08-28,Gaming Headset,Gaming Peripherals,West,Gaming Enthusiast,6300,3500,2,0.1
+2026-08-29,2TB Hard Drive,PC Components,North,Individual,5200,3700,1,0.0
+2026-08-29,RGB Desk Light,Gaming Peripherals,South,Small Business,1600,1000,1,0.0
+2026-08-29,240mm Liquid CPU Cooler,PC Components,Central,Corporate,7056,4956,1,0.02
+2026-08-29,B760 Motherboard,PC Components,South,Gaming Enthusiast,27550,20350,2,0.05
+2026-08-31,Webcam 1080p,Gaming Peripherals,West,Corporate,2040,1140,1,0.15
+2026-09-01,ARGB PC Case,PC Components,West,Corporate,21675,14475,3,0.15
+2026-09-02,Webcam 1080p,Gaming Peripherals,South,Gaming Enthusiast,4416,2616,2,0.08
+2026-09-03,120mm Case Fan,PC Components,West,Corporate,3750,2500,5,0.0
+2026-09-03,USB Gaming Microphone,Gaming Peripherals,Central,Corporate,2720,1470,1,0.15
+2026-09-03,Mechanical Gaming Keyboard,Gaming Peripherals,West,Gaming Enthusiast,8280,4680,2,0.08
+2026-09-05,Air CPU Cooler,PC Components,West,Corporate,7560,5010,3,0.1
+2026-09-05,2TB NVMe SSD,PC Components,West,Individual,9520,6420,1,0.15
+2026-09-06,AMD Ryzen 7 Processor,PC Components,South,Small Business,46550,34350,2,0.05
+2026-09-06,Gaming Chair,Gaming Peripherals,North,Small Business,58000,38800,4,0.0
+2026-09-07,Thermal Paste,PC Components,South,Small Business,2025,1275,5,0.1
+2026-09-08,AMD Radeon RX 7600 GPU,PC Components,South,Individual,25650,20950,1,0.1
+2026-09-08,Mid-Tower PC Case,PC Components,Central,Gaming Enthusiast,15660,10560,3,0.1
+2026-09-09,AMD Radeon RX 7600 GPU,PC Components,North,Corporate,131100,107600,5,0.08
+2026-09-09,16GB DDR5 RAM Kit,PC Components,West,Small Business,14352,9552,3,0.08
+2026-09-10,Gaming Mouse Pad,Gaming Peripherals,North,Gaming Enthusiast,2646,1596,3,0.02
+2026-09-10,Mechanical Gaming Keyboard,Gaming Peripherals,North,Individual,17100,9900,4,0.05
+2026-09-11,Streaming Capture Card,Gaming Peripherals,North,Gaming Enthusiast,14040,8840,2,0.1
+2026-09-12,1TB SATA SSD,PC Components,West,Gaming Enthusiast,4704,3354,1,0.02
+2026-09-14,Gaming Mouse Pad,Gaming Peripherals,North,Individual,1656,956,2,0.08
+2026-09-15,650W 80+ Bronze Power Supply,PC Components,Central,Corporate,17112,11862,3,0.08
+2026-09-15,Gaming Monitor 24-inch,Gaming Peripherals,Central,Gaming Enthusiast,61250,40250,5,0.02
+2026-09-16,650W 80+ Bronze Power Supply,PC Components,West,Corporate,10540,7040,2,0.15
+2026-09-16,ARGB PC Case,PC Components,West,Gaming Enthusiast,7820,5420,1,0.08
+2026-09-16,Air CPU Cooler,PC Components,Central,Corporate,5152,3452,2,0.08
+2026-09-16,AMD Ryzen 5 Processor,PC Components,West,Small Business,13340,9840,1,0.08
+2026-09-17,Streaming Capture Card,Gaming Peripherals,Central,Small Business,6630,4030,1,0.15
+2026-09-18,Gaming Monitor 24-inch,Gaming Peripherals,East,Corporate,47500,30700,4,0.05
+2026-09-20,Gaming Monitor 24-inch,Gaming Peripherals,Central,Individual,23750,15350,2,0.05
+2026-09-22,ARGB PC Case,PC Components,North,Gaming Enthusiast,28900,19300,4,0.15
+2026-09-23,Gaming Headset,Gaming Peripherals,West,Small Business,9660,5460,3,0.08
+2026-09-27,NVIDIA GeForce RTX 4070 GPU,PC Components,North,Corporate,99450,82450,2,0.15
+2026-09-27,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,East,Gaming Enthusiast,18130,11930,1,0.02
+2026-09-28,1TB SATA SSD,PC Components,East,Individual,8832,6132,2,0.08
+2026-09-29,Wireless Gaming Mouse,Gaming Peripherals,Central,Small Business,5600,3400,2,0.0
+2026-09-29,Gaming Controller,Gaming Peripherals,North,Gaming Enthusiast,7020,4020,3,0.1
+2026-09-29,Mechanical Gaming Keyboard,Gaming Peripherals,South,Individual,8100,4500,2,0.1
+2026-09-30,Gaming Chair,Gaming Peripherals,West,Gaming Enthusiast,41325,26925,3,0.05
+2026-09-30,1TB NVMe SSD,PC Components,East,Gaming Enthusiast,29900,20400,5,0.08
+2026-10-01,AMD Radeon RX 7600 GPU,PC Components,North,Corporate,83790,69690,3,0.02
+2026-10-02,AMD Ryzen 7 Processor,PC Components,North,Small Business,22540,16440,1,0.08
+2026-10-04,ARGB PC Case,PC Components,North,Individual,7225,4825,1,0.15
+2026-10-05,B650 Motherboard,PC Components,North,Gaming Enthusiast,74250,53250,5,0.1
+2026-10-05,Webcam 1080p,Gaming Peripherals,North,Individual,2400,1500,1,0.0
+2026-10-06,Wireless Gaming Mouse,Gaming Peripherals,Central,Individual,5320,3120,2,0.05
+2026-10-06,Gaming Controller,Gaming Peripherals,Central,Corporate,2210,1210,1,0.15
+2026-10-07,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,West,Small Business,15725,9525,1,0.15
+2026-10-08,Gaming Chair,Gaming Peripherals,North,Gaming Enthusiast,26680,17080,2,0.08
+2026-10-09,ARGB PC Case,PC Components,East,Gaming Enthusiast,15640,10840,2,0.08
+2026-10-09,Wi-Fi 6 PCIe Adapter,PC Components,Central,Gaming Enthusiast,1800,1250,1,0.0
+2026-10-10,RGB Desk Light,Gaming Peripherals,South,Corporate,1360,760,1,0.15
+2026-10-10,ARGB PC Case,PC Components,Central,Corporate,16150,11350,2,0.05
+2026-10-13,ARGB PC Case,PC Components,North,Gaming Enthusiast,38250,26250,5,0.1
+2026-10-13,Gaming Headset,Gaming Peripherals,South,Gaming Enthusiast,6650,3850,2,0.05
+2026-10-13,AMD Ryzen 7 Processor,PC Components,West,Small Business,122500,92000,5,0.0
+2026-10-14,Wireless Gaming Mouse,Gaming Peripherals,South,Corporate,2520,1420,1,0.1
+2026-10-15,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,East,Individual,16650,10450,1,0.1
+2026-10-15,RGB Desk Light,Gaming Peripherals,East,Corporate,1568,968,1,0.02
+2026-10-15,NVIDIA GeForce RTX 4070 GPU,PC Components,Central,Gaming Enthusiast,57330,48830,1,0.02
+2026-10-16,Gaming Controller,Gaming Peripherals,South,Small Business,2600,1600,1,0.0
+2026-10-17,Streaming Capture Card,Gaming Peripherals,North,Corporate,7800,5200,1,0.0
+2026-10-17,NVIDIA GeForce RTX 4070 GPU,PC Components,South,Small Business,53820,45320,1,0.08
+2026-10-17,2TB Hard Drive,PC Components,North,Individual,9880,6880,2,0.05
+2026-10-18,Gaming Mouse Pad,Gaming Peripherals,West,Gaming Enthusiast,3060,1660,4,0.15
+2026-10-18,Gaming Controller,Gaming Peripherals,Central,Individual,2470,1470,1,0.05
+2026-10-19,Gaming Mouse Pad,Gaming Peripherals,South,Corporate,828,478,1,0.08
+2026-10-19,Mechanical Gaming Keyboard,Gaming Peripherals,East,Corporate,4275,2475,1,0.05
+2026-10-21,32GB DDR5 RAM Kit,PC Components,South,Individual,19600,13800,2,0.0
+2026-10-22,240mm Liquid CPU Cooler,PC Components,West,Corporate,28800,20400,4,0.0
+2026-10-22,Wireless Gaming Mouse,Gaming Peripherals,Central,Individual,2380,1280,1,0.15
+2026-10-22,Gaming Mouse Pad,Gaming Peripherals,East,Gaming Enthusiast,855,505,1,0.05
+2026-10-24,USB Gaming Microphone,Gaming Peripherals,West,Gaming Enthusiast,5760,3260,2,0.1
+2026-10-24,Gaming Chair,Gaming Peripherals,Central,Small Business,24650,15050,2,0.15
+2026-10-24,USB Gaming Microphone,Gaming Peripherals,West,Small Business,8640,4890,3,0.1
+2026-10-25,Gaming Monitor 27-inch 144Hz,Gaming Peripherals,South,Small Business,33300,20900,2,0.1
+2026-10-27,Wireless Gaming Mouse,Gaming Peripherals,Central,Gaming Enthusiast,2520,1420,1,0.1
+2026-10-28,NVIDIA GeForce RTX 4070 GPU,PC Components,South,Small Business,210600,176600,4,0.1
+2026-10-28,Gaming Controller,Gaming Peripherals,South,Corporate,2548,1548,1,0.02
+2026-10-29,650W 80+ Bronze Power Supply,PC Components,West,Gaming Enthusiast,23560,16560,4,0.05
+2026-10-29,Gaming Controller,Gaming Peripherals,East,Individual,7644,4644,3,0.02

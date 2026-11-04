@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusBI • AI-Based Business Analytics Dashboard</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#111827',
+                            900: '#0b0f19',
+                            950: '#070a12'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="bg-slate-50 dark:bg-navy-900 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased">
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <!-- MAIN APP LAYOUT WRAPPER -->
+    <div class="flex h-screen overflow-hidden">
+
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside id="main-sidebar" class="fixed lg:static inset-y-0 left-0 z-50 w-72 bg-white dark:bg-navy-800 border-r border-slate-200 dark:border-slate-800 flex flex-col justify-between transition-transform duration-300 ease-in-out -translate-x-full lg:translate-x-0 shadow-xl lg:shadow-none">
+            
+            <!-- Sidebar Top: Brand & Logo -->
+            <div>
+                <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-blue-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30">
+                            <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h1 class="font-extrabold text-base tracking-tight text-slate-900 dark:text-white leading-tight">NEXUS<span class="text-indigo-500">.BI</span></h1>
+                            <p class="text-[11px] font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Enterprise Analytics</p>
+                        </div>
+                    </div>
+                    <button id="mobile-drawer-close" class="lg:hidden p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-white">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+                <!-- Capstone Project Pill -->
+                <div class="px-6 py-3">
+                    <div class="px-3 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 text-xs font-semibold flex items-center justify-between">
+                        <span class="flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Capstone Project 2026
+                        </span>
+                        <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-indigo-500/20">v2.5</span>
+                    </div>
+                </div>
+
+                <!-- Nav Menu Items -->
+                <nav class="px-3 py-2 space-y-1">
+                    <a href="#overview" data-route="overview" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300">
+                        <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+                        <span>Overview Dashboard</span>
+                    </a>
+                    <a href="#datamanager" data-route="datamanager" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300">
+                        <i data-lucide="database" class="w-4 h-4"></i>
+                        <span>Data Management</span>
+                    </a>
+                    <a href="#sales" data-route="sales" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300">
+                        <i data-lucide="trending-up" class="w-4 h-4"></i>
+                        <span>Sales Analytics</span>
+                    </a>
+                    <a href="#products" data-route="products" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300">
+                        <i data-lucide="package" class="w-4 h-4"></i>
+                        <span>Product Analytics</span>
+                    </a>
+                    <a href="#profit" data-route="profit" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300">
+                        <i data-lucide="indian-rupee" class="w-4 h-4"></i>
+                        <span>Profit Analytics</span>
+                    </a>
+                    <a href="#ai-insights" data-route="ai-insights" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
+                        <span class="flex-1">AI Business Insights</span>
+                        <span class="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-gradient-to-r from-indigo-500 to-blue-500 text-white">AI</span>
+                    </a>
+                    <a href="#reports" data-route="reports" class="nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300">
+                        <i data-lucide="file-text" class="w-4 h-4"></i>
+                        <span>Reports & Export</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Sidebar Bottom: Status Card & Engine Info -->
+            <div class="p-4 m-3 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span class="text-xs font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider">Analytics Engine</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Pandas, NumPy & Statistical AI active</p>
+                <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
+                    <span>Host: Localhost</span>
+                    <span class="text-emerald-500 font-semibold">Online</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ==================== MAIN CONTENT WRAPPER ==================== -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            
+            <!-- TOP NAVBAR -->
+            <header class="h-16 bg-white dark:bg-navy-800 border-b border-slate-200 dark:border-slate-800 px-6 flex items-center justify-between z-10">
+                
+                <div class="flex items-center gap-4">
+                    <button id="mobile-drawer-toggle" class="lg:hidden p-2 rounded-xl text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+
+                    <!-- Active Dataset Selector -->
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 hidden sm:inline">Dataset:</span>
+                        <select id="global-dataset-select" class="bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs rounded-xl px-3 py-2 font-mono font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                            <option value="">Loading datasets...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Right Header Actions -->
+                <div class="flex items-center gap-3">
+                    
+                    <!-- Quick Upload CTA -->
+                    <a href="#datamanager" class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/60 hover:bg-indigo-100 transition-colors">
+                        <i data-lucide="upload-cloud" class="w-3.5 h-3.5"></i>
+                        <span>Upload Data</span>
+                    </a>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle-btn" class="p-2 rounded-xl text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 dark:text-slate-400 transition-colors" title="Toggle Light/Dark Theme">
+                        <i id="theme-sun-icon" data-lucide="sun" class="w-4 h-4 text-amber-400 hidden"></i>
+                        <i id="theme-moon-icon" data-lucide="moon" class="w-4 h-4 text-indigo-400"></i>
+                    </button>
+
+                    <!-- User Profile Avatar -->
+                    <div class="flex items-center gap-2.5 pl-3 border-l border-slate-200 dark:border-slate-800">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-600 to-purple-600 text-white font-bold text-xs flex items-center justify-center shadow-md">
+                            SA
+                        </div>
+                        <div class="hidden md:block text-left">
+                            <p class="text-xs font-bold text-slate-800 dark:text-slate-200 leading-tight">Senior Analyst</p>
+                            <p class="text-[10px] text-slate-400">Capstone Lead</p>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+
+            <!-- SCROLLABLE PAGE BODY -->
+            <main class="flex-1 overflow-y-auto p-6 md:p-8 space-y-8">
+                
+                <!-- ============================================================== -->
+                <!-- MODULE 1: OVERVIEW DASHBOARD VIEW                              -->
+                <!-- ============================================================== -->
+                <section id="view-overview" class="module-view space-y-6">
+                    
+                    <!-- Welcome Hero Header -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <h2 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Executive Overview</h2>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">High-level financial KPIs, sales momentum, and real-time activity stream.</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <a href="#reports" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-500/25 transition-all">
+                                <i data-lucide="file-text" class="w-4 h-4"></i>
+                                View Executive Report
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 6 Headline KPI Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+                        
+                        <!-- KPI 1: Total Revenue -->
+                        <div class="saas-card p-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Total Revenue</span>
+                                <div class="w-8 h-8 rounded-lg bg-indigo-500/10 text-indigo-500 flex items-center justify-center">
+                                    <i data-lucide="indian-rupee" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <div id="kpi-revenue" class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">₹0.00</div>
+                            <div id="kpi-revenue-growth" class="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500">
+                                <i data-lucide="trending-up" class="w-3 h-3"></i> 0.0%
+                            </div>
+                        </div>
+
+                        <!-- KPI 2: Total Sales Count -->
+                        <div class="saas-card p-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Total Sales</span>
+                                <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center">
+                                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <div id="kpi-sales-count" class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">0</div>
+                            <span class="text-xs text-slate-400">Recorded orders</span>
+                        </div>
+
+                        <!-- KPI 3: Total Profit -->
+                        <div class="saas-card p-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Total Profit</span>
+                                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+                                    <i data-lucide="wallet" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <div id="kpi-profit" class="text-xl font-extrabold text-emerald-600 dark:text-emerald-400 mb-2">₹0.00</div>
+                            <span id="kpi-profit-margin" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">0% margin</span>
+                        </div>
+
+                        <!-- KPI 4: Average Sales -->
+                        <div class="saas-card p-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Average Sale</span>
+                                <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center">
+                                    <i data-lucide="pie-chart" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <div id="kpi-avg-sales" class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">₹0.00</div>
+                            <span class="text-xs text-slate-400">Per transaction</span>
+                        </div>
+
+                        <!-- KPI 5: Total Products -->
+                        <div class="saas-card p-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Catalog SKUs</span>
+                                <div class="w-8 h-8 rounded-lg bg-purple-500/10 text-purple-500 flex items-center justify-center">
+                                    <i data-lucide="boxes" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <div id="kpi-products" class="text-xl font-extrabold text-slate-900 dark:text-white mb-2">0</div>
+                            <span class="text-xs text-slate-400">Unique items</span>
+                        </div>
+
+                        <!-- KPI 6: Correlation -->
+                        <div class="saas-card p-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Sales-Profit Correlation</span>
+                                <div class="w-8 h-8 rounded-lg bg-rose-500/10 text-rose-500 flex items-center justify-center">
+                                    <i data-lucide="git-merge" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <div id="kpi-correlation" class="text-sm font-bold font-mono text-indigo-500 mb-2">r = 0.99</div>
+                            <span class="text-[11px] text-slate-400">Pearson r metric</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Main Chart & Quick Actions Row -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        
+                        <!-- Revenue & Net Profit Trend Chart (2 cols) -->
+                        <div class="lg:col-span-2 saas-card p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div>
+                                    <h3 class="text-base font-bold text-slate-900 dark:text-white">Revenue & Profit Trajectory</h3>
+                                    <p class="text-xs text-slate-400">Historical performance across recorded periods.</p>
+                                </div>
+                                <span class="text-xs font-mono font-medium px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Live Trend</span>
+                            </div>
+                            <div class="h-72 w-full">
+                                <canvas id="overview-chart-canvas"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Quick Action & Capstone Highlights Card (1 col) -->
+                        <div class="saas-card p-6 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Interactive Toolkit</h3>
+                                <p class="text-xs text-slate-400 mb-4">Quick shortcuts across the capstone platform.</p>
+
+                                <div class="space-y-3">
+                                    <a href="#datamanager" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 transition-colors">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-lg bg-indigo-500/10 text-indigo-500 flex items-center justify-center">
+                                                <i data-lucide="database" class="w-4 h-4"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-xs font-bold text-slate-900 dark:text-white">Clean & Impute Data</p>
+                                                <p class="text-[11px] text-slate-400">Handle NaNs & remove duplicates</p>
+                                            </div>
+                                        </div>
+                                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                                    </a>
+
+                                    <a href="#ai-insights" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 transition-colors">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-lg bg-purple-500/10 text-purple-500 flex items-center justify-center">
+                                                <i data-lucide="bot" class="w-4 h-4"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-xs font-bold text-slate-900 dark:text-white">Ask Natural Language AI</p>
+                                                <p class="text-[11px] text-slate-400">Ask questions in plain English</p>
+                                            </div>
+                                        </div>
+                                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                                    </a>
+
+                                    <a href="#sales" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 transition-colors">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+                                                <i data-lucide="bar-chart-2" class="w-4 h-4"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-xs font-bold text-slate-900 dark:text-white">Sales & Date Filtering</p>
+                                                <p class="text-[11px] text-slate-400">Drill down monthly and daily</p>
+                                            </div>
+                                        </div>
+                                        <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                                <span>Capstone Grade Standard</span>
+                                <span class="font-bold text-indigo-500">A+ Ready</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Recent Activity Stream -->
+                    <div class="saas-card p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Recent Transactions & Records</h3>
+                                <p class="text-xs text-slate-400">Latest entries parsed by the analytics pipeline.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left modern-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date / Period</th>
+                                        <th>Product / Item</th>
+                                        <th>Sales Revenue</th>
+                                        <th>Profit Margin</th>
+                                        <th>Validation Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="overview-recent-table-body">
+                                    <tr><td colspan="5" class="text-center py-6 text-slate-400">Loading records...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- ============================================================== -->
+                <!-- MODULE 2: DATA UPLOAD & MANAGEMENT VIEW                        -->
+                <!-- ============================================================== -->
+                <section id="view-datamanager" class="module-view hidden space-y-6">
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <h2 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Data Upload & Management</h2>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Ingest CSV/Excel files, inspect null values, remove duplicates, and impute data.</p>
+                        </div>
+                        <!-- Download buttons -->
+                        <div class="flex items-center gap-2">
+                            <a href="/api/dataset/export/csv" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition-colors">
+                                <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                                Export CSV
+                            </a>
+                            <a href="/api/dataset/export/excel" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-colors">
+                                <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5"></i>
+                                Export Excel
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Upload Zone & File Dropper -->
+                    <div class="saas-card p-6">
+                        <div id="file-dropzone" class="dropzone rounded-2xl p-8 text-center flex flex-col items-center justify-center cursor-pointer bg-slate-50/50 dark:bg-slate-800/30">
+                            <input type="file" id="file-upload-input" class="hidden" accept=".csv, .xlsx, .xls">
+                            <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center mb-3">
+                                <i data-lucide="cloud-upload" class="w-7 h-7"></i>
+                            </div>
+                            <h4 class="text-base font-bold text-slate-900 dark:text-white mb-1">Drag and drop your dataset here</h4>
+                            <p class="text-xs text-slate-400 mb-4">Supports CSV (.csv) and Microsoft Excel (.xlsx, .xls) up to 32MB</p>
+                            <button onclick="document.getElementById('file-upload-input').click()" class="px-4 py-2 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-500/20 transition-all">
+                                Select File from Computer
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dataset Metadata & Duplicate Banner -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="saas-card p-4">
+                            <span class="text-xs text-slate-400 block font-medium mb-1">Active File</span>
+                            <span id="dm-dataset-name" class="text-sm font-bold font-mono text-indigo-600 dark:text-indigo-400 truncate block">...</span>
+                        </div>
+                        <div class="saas-card p-4">
+                            <span class="text-xs text-slate-400 block font-medium mb-1">Total Records</span>
+                            <span id="dm-total-rows" class="text-lg font-black text-slate-900 dark:text-white">0</span>
+                        </div>
+                        <div class="saas-card p-4">
+                            <span class="text-xs text-slate-400 block font-medium mb-1">Total Columns</span>
+                            <span id="dm-total-cols" class="text-lg font-black text-slate-900 dark:text-white">0</span>
+                        </div>
+                        <div class="saas-card p-4">
+                            <span class="text-xs text-slate-400 block font-medium mb-1">Duplicate Rows</span>
+                            <span id="dm-duplicate-count" class="text-lg font-black text-amber-500">0</span>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate Alert Banner -->
+                    <div id="dm-duplicate-banner" class="hidden p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-300 text-xs flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="copy" class="w-4 h-4 text-amber-500"></i>
+                            <span>Warning: <strong id="dm-duplicate-banner-count">0</strong> duplicate records detected in the active dataset.</span>
+                        </div>
+                        <span class="font-semibold underline cursor-pointer" onclick="document.getElementById('btn-apply-cleaning').click()">Clean Now</span>
+                    </div>
+
+                    <!-- Missing Values & Cleaning Panel -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        
+                        <!-- Missing Values Breakdown (1 col) -->
+                        <div class="saas-card p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Missing Values</h3>
+                                <span id="dm-total-missing-badge" class="text-xs font-semibold px-2 py-0.5 rounded-full">0 Missing</span>
+                            </div>
+                            <div id="dm-missing-container" class="space-y-2 max-h-64 overflow-y-auto pr-1">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Data Cleaning Controls (2 cols) -->
+                        <div class="lg:col-span-2 saas-card p-6">
+                            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Data Cleaning & Transformation</h3>
+                            <p class="text-xs text-slate-400 mb-5">Automate missing value imputation and deduplication like pandas fillna() and drop_duplicates().</p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <label class="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1.5">Missing Value Strategy</label>
+                                    <select id="dm-clean-strategy" class="w-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs rounded-xl px-3 py-2.5 font-medium focus:ring-2 focus:ring-indigo-500">
+                                        <option value="mean">Impute with Mean (df.fillna(df.mean()))</option>
+                                        <option value="median">Impute with Median</option>
+                                        <option value="mode">Impute with Mode (Most Frequent)</option>
+                                        <option value="drop">Drop Rows with Any Missing Values</option>
+                                    </select>
+                                </div>
+                                <div class="flex items-center pt-6">
+                                    <label class="flex items-center gap-2 cursor-pointer text-xs font-semibold text-slate-700 dark:text-slate-300">
+                                        <input type="checkbox" id="dm-clean-remove-duplicates" checked class="rounded text-indigo-600 focus:ring-indigo-500 w-4 h-4">
+                                        <span>Remove Duplicate Records (df.drop_duplicates())</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <button id="btn-apply-cleaning" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-500/25 transition-all">
+                                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                                    Apply Cleaning & Impute
+                                </button>
+                                <button id="btn-reset-dataset" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                                    <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                                    Reset to Raw Data
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Dataset Preview Table -->
+                    <div class="saas-card p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Dataset Preview</h3>
+                                <p class="text-xs text-slate-400">First 25 records parsed from active source.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto max-h-80 overflow-y-auto border border-slate-200 dark:border-slate-800 rounded-xl">
+                            <table class="w-full text-left">
+                                <thead id="dm-table-head" class="bg-slate-50 dark:bg-slate-800/80 sticky top-0">
+                                    <!-- Populated dynamically -->
+                                </thead>
+                                <tbody id="dm-table-body" class="divide-y divide-slate-100 dark:divide-slate-800">
+                                    <!-- Populated dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Statistical Summary Table (describe()) -->
+                    <div class="saas-card p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Statistical Distribution (df.describe())</h3>
+                                <p class="text-xs text-slate-400">Mean, standard deviation, quartiles, and range across numerical features.</p>
+                            </div>
+                        </div>
+                        <div id="dm-stats-summary-table" class="overflow-x-auto">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- ============================================================== -->
+                <!-- MODULE 3: SALES ANALYTICS VIEW                                 -->
+                <!-- ============================================================== -->
+                <section id="view-sales" class="module-view hidden space-y-6">
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <h2 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Sales Analytics</h2>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Deep-dive into monthly sales, daily cadence, growth rates, and date filters.</p>
+                        </div>
+
+                        <!-- Date Range Filters -->
+                        <div class="flex flex-wrap items-center gap-2">
+                            <input type="date" id="sales-date-from" class="bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs rounded-xl px-3 py-2 font-mono">
+                            <span class="text-xs text-slate-400">to</span>
+                            <input type="date" id="sales-date-to" class="bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 text-xs rounded-xl px-3 py-2 font-mono">
+                            <button id="sales-filter-apply-btn" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm transition-all">
+                                Filter
+                            </button>
+                            <button id="sales-filter-reset-btn" class="px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                                Reset
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Highlight Banners: Peak & Lowest Sales -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="saas-card p-4">
+                            <span class="text-xs text-slate-400 block font-medium mb-1">Filtered Sales Sum</span>
+                            <span id="sales-total-amount" class="text-xl font-black text-slate-900 dark:text-white">₹0.00</span>
+                        </div>
+                        <div class="saas-card p-4">
+                            <span class="text-xs text-slate-400 block font-medium mb-1">Average Period Sales</span>
+                            <span id="sales-average-amount" class="text-xl font-black text-slate-900 dark:text-white">₹0.00</span>
+                        </div>
+                        <div class="saas-card p-4 border-l-4 border-l-emerald-500">
+                            <span class="text-xs text-emerald-600 dark:text-emerald-400 block font-bold mb-1">Peak Sales Period</span>
+                            <div class="flex items-baseline justify-between">
+                                <span id="sales-peak-period-name" class="text-sm font-bold text-slate-800 dark:text-slate-200">...</span>
+                                <span id="sales-peak-period-val" class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">₹0</span>
+                            </div>
+                        </div>
+                        <div class="saas-card p-4 border-l-4 border-l-amber-500">
+                            <span class="text-xs text-amber-600 dark:text-amber-400 block font-bold mb-1">Lowest Sales Period</span>
+                            <div class="flex items-baseline justify-between">
+                                <span id="sales-low-period-name" class="text-sm font-bold text-slate-800 dark:text-slate-200">...</span>
+                                <span id="sales-low-period-val" class="text-xs font-mono font-bold text-amber-600 dark:text-amber-400">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Monthly Revenue Bar Chart -->
+                    <div class="saas-card p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Monthly Sales Breakdown</h3>
+                                <p class="text-xs text-slate-400">Total volume aggregated by monthly operating cycles.</p>
+                            </div>
+                            <span id="sales-overall-growth" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800">
+                                0.0% Overall Trend
+                            </span>
+                        </div>
+                        <div class="h-72 w-full">
+                            <canvas id="sales-monthly-chart-canvas"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Two Charts: Cumulative Revenue & Daily Timeline -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        
+                        <!-- Cumulative Revenue Area Chart -->
+                        <div class="saas-card p-6">
+                            <div class="mb-4">
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Cumulative Revenue Progression</h3>
+                                <p class="text-xs text-slate-400">Total rupee accumulation over time.</p>
+                            </div>
+                            <div class="h-64 w-full">
+                                <canvas id="sales-cumulative-chart-canvas"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Daily Timeline Chart -->
+                        <div class="saas-card p-6">
+                            <div class="mb-4">
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Daily Cadence Performance</h3>
+                                <p class="text-xs text-slate-400">Daily granularity tracking transactions.</p>
+                            </div>
+                            <div class="h-64 w-full">
+                                <canvas id="sales-daily-chart-canvas"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ============================================================== -->
+                <!-- MODULE 4: PRODUCT ANALYTICS VIEW                               -->
+                <!-- ============================================================== -->
+                <section id="view-products" class="module-view hidden space-y-6">
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <h2 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Product Analytics</h2>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Catalog rankings, best & least-selling items, and contribution percentages.</p>
+                        </div>
+                    </div>
+
+                    <!-- Product Spotlight Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        
+                        <!-- Best Selling -->
+                        <div class="saas-card p-5 border-l-4 border-l-emerald-500">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Best-Selling Product</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">RANK #1</span>
+                            </div>
+                            <h4 id="prod-best-name" class="text-lg font-black text-slate-900 dark:text-white mb-1">...</h4>
+                            <div id="prod-best-rev" class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1">₹0.00</div>
+                            <p id="prod-best-pct" class="text-xs text-slate-400">0% of total revenue</p>
+                        </div>
+
+                        <!-- Least Selling -->
+                        <div class="saas-card p-5 border-l-4 border-l-rose-500">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">Least-Selling Product</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/15 text-rose-600 dark:text-rose-400">ATTENTION</span>
+                            </div>
+                            <h4 id="prod-least-name" class="text-lg font-black text-slate-900 dark:text-white mb-1">...</h4>
+                            <div id="prod-least-rev" class="text-sm font-bold text-rose-600 dark:text-rose-400 mb-1">₹0.00</div>
+                            <p id="prod-least-pct" class="text-xs text-slate-400">0% of total revenue</p>
+                        </div>
+
+                        <!-- Catalog Size -->
+                        <div class="saas-card p-5">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-2">Catalog Diversity</span>
+                            <div id="prod-total-count" class="text-2xl font-black text-indigo-600 dark:text-indigo-400 mb-1">0</div>
+                            <p class="text-xs text-slate-400">Active products monitored in dataset</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Charts Row: Revenue Bar & Donut Contribution -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        
+                        <!-- Horizontal Bar Revenue Comparison -->
+                        <div class="saas-card p-6">
+                            <div class="mb-4">
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Product Revenue Comparison</h3>
+                                <p class="text-xs text-slate-400">Total revenue generated by product line.</p>
+                            </div>
+                            <div class="h-72 w-full">
+                                <canvas id="prod-bar-chart-canvas"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Contribution Donut Chart -->
+                        <div class="saas-card p-6">
+                            <div class="mb-4">
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Product Contribution Percentage</h3>
+                                <p class="text-xs text-slate-400">Relative share of total enterprise revenue.</p>
+                            </div>
+                            <div class="h-72 w-full">
+                                <canvas id="prod-donut-chart-canvas"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Full Product Leaderboard Table -->
+                    <div class="saas-card p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Product Performance Leaderboard</h3>
+                                <p class="text-xs text-slate-400">Rankings sorted by cumulative gross revenue.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left modern-table">
+                                <thead>
+                                    <tr>
+                                        <th class="w-16 text-center">Rank</th>
+                                        <th>Product Name</th>
+                                        <th>Total Sales</th>
+                                        <th>Total Profit</th>
+                                        <th>Profit Margin</th>
+                                        <th>Revenue Contribution</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="prod-table-body">
+                                    <!-- Populated dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- ============================================================== -->
+                <!-- MODULE 5: PROFIT ANALYTICS VIEW                                -->
+                <!-- ============================================================== -->
+                <section id="view-profit" class="module-view hidden space-y-6">
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <h2 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Profit Analytics</h2>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Operating margins, profitability classification matrix, and revenue vs profit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Profit Headline KPIs -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="saas-card p-4">
+                            <span class="text-xs text-slate-400 block font-medium mb-1">Total Net Profit</span>
+                            <span id="profit-total-metric" class="text-xl font-black text-emerald-600 dark:text-emerald-400">₹0.00</span>
+                        </div>
+                        <div class="saas-card p-4">
+                            <span class="text-xs text-slate-400 block font-medium mb-1">Average Profit per Record</span>
+                            <span id="profit-avg-metric" class="text-xl font-black text-slate-900 dark:text-white">₹0.00</span>
+                        </div>
+                        <div class="saas-card p-4">
+                            <span class="text-xs text-slate-400 block font-medium mb-1">Overall Net Margin</span>
+                            <span id="profit-margin-metric" class="text-xl font-black text-indigo-600 dark:text-indigo-400">0%</span>
+                        </div>
+                        <div class="saas-card p-4">
+                            <span class="text-xs text-slate-400 block font-medium mb-1">Highest Single Profit Record</span>
+                            <span id="profit-max-metric" class="text-xl font-black text-slate-900 dark:text-white">₹0.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Dual-Axis Revenue vs Profit Combo Chart -->
+                    <div class="saas-card p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Revenue vs. Profit Comparison</h3>
+                                <p class="text-xs text-slate-400">Dual-axis analysis tracking margin retention.</p>
+                            </div>
+                        </div>
+                        <div class="h-72 w-full">
+                            <canvas id="profit-combo-chart-canvas"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Profitability Tier Matrix -->
+                    <div class="saas-card p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Product Profitability Matrix</h3>
+                                <p class="text-xs text-slate-400">Classified into High (>20%), Healthy (10-20%), and Low Margin tiers.</p>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left modern-table">
+                                <thead>
+                                    <tr>
+                                        <th>Product Name</th>
+                                        <th>Sales Revenue</th>
+                                        <th>Net Profit</th>
+                                        <th>Margin (%)</th>
+                                        <th>Classification Tier</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="profit-matrix-body">
+                                    <!-- Populated dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- ============================================================== -->
+                <!-- MODULE 6: AI BUSINESS INSIGHTS & ASK AI VIEW                   -->
+                <!-- ============================================================== -->
+                <section id="view-ai-insights" class="module-view hidden space-y-6">
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <h2 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-2">
+                                <i data-lucide="sparkles" class="w-6 h-6 text-indigo-500"></i>
+                                AI Business Insights & Assistant
+                            </h2>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Automated statistical explanations, anomaly detection, and natural language Q&A.</p>
+                        </div>
+                    </div>
+
+                    <!-- Automated AI Insights Cards -->
+                    <div class="space-y-3">
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Automated Intelligence Feed</h3>
+                        <div id="ai-insights-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Anomalies & Recommendations Row -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        
+                        <!-- Anomalies & Outliers -->
+                        <div class="saas-card p-6 space-y-4">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="alert-octagon" class="w-5 h-5 text-amber-500"></i>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Unusual Changes & Anomalies</h3>
+                            </div>
+                            <p class="text-xs text-slate-400">Statistical outlier detection (>1.8 standard deviations from mean) and risk alerts.</p>
+                            <div id="ai-anomalies-container" class="space-y-3">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Strategic AI Recommendations -->
+                        <div class="saas-card p-6 space-y-4">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="lightbulb" class="w-5 h-5 text-indigo-500"></i>
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Strategic Recommendations</h3>
+                            </div>
+                            <p class="text-xs text-slate-400">Prescriptive business actions to optimize profit and mitigate turnover friction.</p>
+                            <div id="ai-recommendations-container" class="space-y-2.5">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Interactive Natural Language "Ask AI" Assistant -->
+                    <div class="saas-card p-6 border-2 border-indigo-500/20">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-blue-500 flex items-center justify-center text-white shadow-md">
+                                    <i data-lucide="bot" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-base font-bold text-slate-900 dark:text-white">Natural Language Business Assistant</h3>
+                                    <p class="text-xs text-slate-400">Ask questions in plain English to interrogate the active dataset.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Suggested Query Chips -->
+                        <div class="mb-4">
+                            <span class="text-xs font-semibold text-slate-400 block mb-2">Example Capstone Questions:</span>
+                            <div class="flex flex-wrap gap-2">
+                                <button class="ai-prompt-chip px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-500/10 hover:text-indigo-500 transition-colors" data-query="Which product generates the highest revenue?">
+                                    Which product generates highest revenue?
+                                </button>
+                                <button class="ai-prompt-chip px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-500/10 hover:text-indigo-500 transition-colors" data-query="What is the total profit?">
+                                    What is the total profit?
+                                </button>
+                                <button class="ai-prompt-chip px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-500/10 hover:text-indigo-500 transition-colors" data-query="Which month has the highest sales?">
+                                    Which month has the highest sales?
+                                </button>
+                                <button class="ai-prompt-chip px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-500/10 hover:text-indigo-500 transition-colors" data-query="Why are sales decreasing?">
+                                    Why are sales decreasing?
+                                </button>
+                                <button class="ai-prompt-chip px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-500/10 hover:text-indigo-500 transition-colors" data-query="Give me a summary of business performance.">
+                                    Summary of business performance
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Chat Messages Container -->
+                        <div id="ai-chat-messages" class="h-72 overflow-y-auto space-y-4 p-4 rounded-2xl bg-slate-50/50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 mb-4">
+                            <!-- Initial welcome bubble -->
+                            <div class="flex gap-3 justify-start">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-500 to-blue-500 text-white flex items-center justify-center font-bold text-xs flex-shrink-0 shadow-md">
+                                    AI
+                                </div>
+                                <div class="max-w-[85%] chat-bubble-ai p-4 rounded-2xl rounded-tl-none text-sm text-slate-800 dark:text-slate-200 shadow-sm leading-relaxed">
+                                    Hello! I am your AI Business Analytics Assistant. You can ask me any question about your revenue, sales trends, product rankings, profit margins, or business recommendations. What would you like to examine today?
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Input Toolbar -->
+                        <div class="flex items-center gap-2">
+                            <input type="text" id="ai-chat-input" placeholder="Ask a business analytics question... (e.g. Which product generates the highest revenue?)" class="flex-1 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <button id="ai-chat-send-btn" class="px-5 py-3 rounded-xl text-sm font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-500/25 flex items-center gap-2 transition-all">
+                                <span>Ask</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- ============================================================== -->
+                <!-- MODULE 7: REPORTS & EXPORT VIEW                                -->
+                <!-- ============================================================== -->
+                <section id="view-reports" class="module-view hidden space-y-6">
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 no-print">
+                        <div>
+                            <h2 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Executive Reports & Export</h2>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Generate structured analytical reports and export as PDF, Excel, or CSV.</p>
+                        </div>
+
+                        <!-- Export Action Buttons -->
+                        <div class="flex flex-wrap items-center gap-2">
+                            <button id="report-export-pdf-btn" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white shadow-md shadow-indigo-500/20 transition-all">
+                                <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+                                Export as PDF
+                            </button>
+                            <button id="report-export-excel-btn" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm transition-colors">
+                                <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5"></i>
+                                Export Excel
+                            </button>
+                            <button id="report-export-csv-btn" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition-colors">
+                                <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                                Download CSV
+                            </button>
+                            <button id="report-refresh-btn" class="p-2 rounded-xl text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="Refresh Report Data">
+                                <i data-lucide="rotate-cw" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Printable Analytical Report Container -->
+                    <div class="saas-card p-8 md:p-10 space-y-8 bg-white dark:bg-navy-800 border border-slate-200 dark:border-slate-800 rounded-3xl">
+                        
+                        <!-- Report Header -->
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-slate-200 dark:border-slate-700 gap-4">
+                            <div>
+                                <span class="text-xs font-mono font-bold uppercase tracking-wider text-indigo-500">Official Analytical Document</span>
+                                <h1 id="report-doc-title" class="text-2xl font-black text-slate-900 dark:text-white mt-1">Executive Business Analytics Report</h1>
+                                <p class="text-xs text-slate-400 mt-1">Generated: <span id="report-doc-time" class="font-medium text-slate-600 dark:text-slate-300">...</span></p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-slate-400 block">Dataset Analyzed</span>
+                                <span id="report-doc-dataset" class="font-mono text-xs font-bold text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-slate-700/60 px-3 py-1.5 rounded-lg inline-block mt-1">...</span>
+                            </div>
+                        </div>
+
+                        <!-- Section 1: Executive KPI Summary -->
+                        <div>
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3">1. Key Financial & Operational Metrics</h3>
+                            <div id="report-exec-summary-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Product Performance Leaderboard -->
+                        <div>
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3">2. Top Product Performance Leaderboard</h3>
+                            <div class="overflow-x-auto border border-slate-200 dark:border-slate-700 rounded-2xl">
+                                <table class="w-full text-left text-xs">
+                                    <thead class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 text-slate-400 uppercase font-bold">
+                                        <tr>
+                                            <th class="py-2.5 px-3">Product</th>
+                                            <th class="py-2.5 px-3">Revenue</th>
+                                            <th class="py-2.5 px-3">Net Profit</th>
+                                            <th class="py-2.5 px-3">Margin (%)</th>
+                                            <th class="py-2.5 px-3">Catalog Share</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="report-leaderboard-body" class="divide-y divide-slate-100 dark:divide-slate-800">
+                                        <!-- Populated dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: AI Strategic Recommendations -->
+                        <div>
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3">3. Prescriptive AI Business Recommendations</h3>
+                            <ul id="report-recommendations-list" class="space-y-2.5 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700">
+                                <!-- Populated dynamically -->
+                            </ul>
+                        </div>
+
+                        <!-- Report Footer -->
+                        <div class="pt-6 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between text-xs text-slate-400">
+                            <span>NexusBI Automated Capstone Analytics Engine</span>
+                            <span>Confidential • Internal Business Use Only</span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </main>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/charts.js"></script>
+    <script src="/static/js/modules/overview.js"></script>
+    <script src="/static/js/modules/data_manager.js"></script>
+    <script src="/static/js/modules/sales_analytics.js"></script>
+    <script src="/static/js/modules/product_analytics.js"></script>
+    <script src="/static/js/modules/profit_analytics.js"></script>
+    <script src="/static/js/modules/ai_insights.js"></script>
+    <script src="/static/js/modules/reports_export.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
